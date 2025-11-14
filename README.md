@@ -6,7 +6,8 @@ Clique no arquivo NightSKYFinal.zip acima e faça o download.
 
 Descompacte o arquivo e execute o NightSKY seguindo as seguintes instruções:
 
-
+<br>
+<br>
 Metodo 1: Arquivo executável (metodo mais simples e preferível):
 
   1. Para iniciar o servidor, dê dois cliques no executável nightsky (o arquivo do tipo Aplicativo).
@@ -20,7 +21,8 @@ Metodo 1: Arquivo executável (metodo mais simples e preferível):
   5. Na barra de endereço, digite: http://localhost:3000
 
 
-
+<br>
+<br>
 Metodo 2: Iniciar o servidor manualmente pelo terminal (caso o seu sistema bloqueie o arquivo executável):
 
   1. Baixe o node (se não tiver): https://nodejs.org
