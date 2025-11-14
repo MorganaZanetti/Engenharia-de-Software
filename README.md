@@ -2,7 +2,7 @@
 
 Para baixar o projeto final:
 
-Clique no arquivo NightSKYFinal acima e faça o download.
+Clique no arquivo NightSKYFinal.zip acima e faça o download.
 
 Descompacte o arquivo e execute o nightsky seguindo as seguintes instruções:
 
