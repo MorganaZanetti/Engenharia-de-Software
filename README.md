@@ -6,7 +6,7 @@ Clique no arquivo NightSKYFinal acima e faça o download.
 
 Descompacte o arquivo e execute o nightsky seguindo as seguintes instruções:
 
-  1. Para iniciar o servidor, dê dois cliques no arquivo nightsky (o arquivo do tipo Aplicativo).
+  1. Para iniciar o servidor, dê dois cliques no executável nightsky (o arquivo do tipo Aplicativo).
      
   2. Uma janela de Terminal irá se abrir e deve exibir a mensagem "Servidor iniciado".
      
