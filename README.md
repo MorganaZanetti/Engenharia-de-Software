@@ -29,7 +29,7 @@ Metodo 2: Iniciar o servidor manualmente pelo terminal (caso o seu sistema bloqu
 
   2. Abra o cmd ou powershell.
      
-  3. Acesse a pasta raiz do projeto: cd caminho/da/pasta/NightSKY
+  3. Acesse a pasta raiz do projeto: cd caminho/da/pasta/NightSKYFinal
 
   4. Instale as dependências: npm install
 
