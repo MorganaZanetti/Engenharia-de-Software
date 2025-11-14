@@ -13,6 +13,6 @@ Passo 2. Executar o arquivo nightsky(.bat)
 
 Obrsevações.
 <br>
-Não fechar o(s) terminai(s) durante a execução do programa
+Não fechar o terminal durante a execução do programa
 <br>
 Caso a página não carregar durante a execução, apertar F5 para recarregar a página
