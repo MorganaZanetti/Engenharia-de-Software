@@ -4,7 +4,7 @@ Para baixar o projeto final:
 
 Clique no arquivo NightSKYFinal acima e faça o download.
 
-Descompacte o arquivo e execute o nightsky seguindo as seguintes instruções (ou verifique COMO_USAR.md presente no arquivo):
+Descompacte o arquivo e execute o nightsky seguindo as seguintes instruções:
 
   1. Para iniciar o servidor, dê dois cliques no arquivo nightsky (o arquivo do tipo Aplicativo).
      
