@@ -10,3 +10,9 @@ Descompacte o arquivo e execute o NightSKY seguindo as seguintes instruções:
 Passo 1. Abrir a pasta NightSky.
 
 Passo 2. Executar o arquivo nightsky(.bat)
+
+Obrsevações.
+<br>
+Não fechar o(s) terminai(s) durante a execução do programa
+<br>
+Caso a página não carregar durante a execução, apertar F5 para recarregar a página
