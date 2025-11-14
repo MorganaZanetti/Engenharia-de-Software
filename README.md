@@ -1,6 +1,6 @@
 # Engenharia-de-Software
 
-Para baixar o projeto final:
+Para testar o projeto final:
 
 Clique no arquivo NightSKYFinal.zip acima e faça o download.
 
