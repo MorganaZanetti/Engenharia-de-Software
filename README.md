@@ -8,37 +8,12 @@ Descompacte o arquivo e execute o NightSKY seguindo as seguintes instruções:
 
 <br>
 <br>
-Metodo 1: Arquivo executável (metodo mais simples e preferível):
+Passo à passo para executar o NightSky.
 
-  1. Para iniciar o servidor, dê dois cliques no executável nightsky (o arquivo do tipo Aplicativo).
-     
-  2. Uma janela de Terminal irá se abrir e deve exibir a mensagem "Servidor iniciado".
-     
-  3. Não feche a janela do Terminal.
-     
-  4. Abra seu navegador (Chrome, Firefox, Edge, etc.).
-     
-  5. Na barra de endereço, digite: http://localhost:3000
+Passo 1. Baixar o NightSky.zip em realeses na página do Github.
 
+Passo 2. Descompactar o .zip.
 
-<br>
-<br>
-Metodo 2: Iniciar o servidor manualmente pelo terminal (caso o seu sistema bloqueie o arquivo executável):
+Passo 3. Abrir a pasta NightSky.
 
-  1. Baixe o node (se não tiver): https://nodejs.org
-
-  2. Abra o cmd ou powershell.
-     
-  3. Acesse a pasta raiz do projeto: cd caminho/da/pasta/NightSKYFinal
-
-  4. Instale as dependências: npm install
-
-  5. Inicie o servidor: node index.js
-
-  6. O terminal deve exibir a mensagem "Servidor iniciado"
-     
-  7. Não feche a janela do Terminal.
-     
-  8. Abra seu navegador (Chrome, Firefox, Edge, etc.).
-     
-  9. Na barra de endereço, digite: http://localhost:3000
+Passo 4. Executar o arquivo nightsky(.bat)
