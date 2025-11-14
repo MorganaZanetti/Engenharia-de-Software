@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo - <%= jogo.db_nome_jogo %></title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+<div id="container">
+    <div class="link_paginas">
+        <a href="/voltarcatalogo">
+            <img src="/seta.png" class="imagem"/>
+        </a>
+        <a href="/irperfil">
+            <img src="/user.png" class="imagem"/>
+        </a>
+    </div>
+</div>
+<div class="jogo-container">
+    <div class="jogo-content">
+        <img src="<%= jogo.db_imagem %>" alt="<%= jogo.db_nome_jogo %>">
+
+        <div class="jogo-info">
+            <h1><%= jogo.db_nome_jogo %></h1>
+
+            <div class="descricao-jogo">
+                <strong>Descrição</strong>
+                <%= jogo.db_descricao %>
+            </div>
+
+            <div class="jogo-detalhes">
+                <p>
+                    <strong>Desenvolvedor:</strong>
+                    <span><%= dev %></span>
+                </p>
+                <p>
+                    <strong>Publisher:</strong>
+                    <span><%= publisher %></span>
+                </p>
+                <p>
+                    <strong>Categoria:</strong>
+                    <span>
+                        <% if (jogo.db_categoria && jogo.db_categoria.length > 0) { %>
+                            <div class="categorias">
+                                <% jogo.db_categoria.forEach(categoria => { %>
+                                    <span class="categoria-tag"><%= categoria %></span>
+                                <% }) %>
+                            </div>
+                        <% } else { %>
+                            —
+                        <% } %>
+                    </span>
+                </p>
+                <p class="preco-destaque">
+                    <strong>Preço:</strong>
+                    <span>R$ <%= jogo.db_preço %></span>
+                </p>
+            </div>
+
+            <!-- BOTÃO DE COMPRA -->
+            <form action="/adicionar_biblioteca" method="POST" class="jogo-compra">
+                <input type="hidden" name="id" value="<%= jogo._id %>">
+                <input type="hidden" name="nome_jogo" value="<%= jogo.db_nome_jogo %>">
+                <input type="hidden" name="imagem" value="<%= jogo.db_imagem %>">
+                <% if (comprar) { %>
+                    <button type="submit"><%= comprar %></button>
+                <% } %>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

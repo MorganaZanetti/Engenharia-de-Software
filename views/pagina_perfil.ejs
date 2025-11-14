@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+<div class="perfil-container">
+    <div class="container_perfil">
+        <a href="/voltarcatalogo">
+            <img src="/seta.png" class="imagem"/>
+        </a>
+        <img src="/user.png" class="foto_user" alt="Foto do usuário"/>
+        <p><strong></strong> <%= usuario.db_nome %></p>
+    </div>
+
+    <div class="perfil-info">
+        <p><strong>Email:</strong> <%= usuario.db_email %></p>
+        <p><strong>Tipo:</strong> <%= usuario.db_tipo_conta %></p>
+    </div>
+
+    <a href="/voltarlogin" class="perfil-logout">Logout</a>
+</div>
+</body>
+</html>

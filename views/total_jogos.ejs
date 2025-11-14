@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogos</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+    <div id="container">
+    <div class="link_paginas">
+            <a href="/voltarcatalogo">
+                <img src="/seta.png" class="imagem"/>
+            </a>
+            <a href="/irperfil">
+                <img src="/user.png" class="imagem"/>
+            </a>
+        </div>
+    </div>
+    <h1>Meus Jogos</h1>
+    <h3>Total de jogos: <%= resposta %></h3>
+
+
+    <a href="ircadastro_jogo"> <%= cadastrojogo %></a>
+    <br>
+
+    <ul>
+        <% meusjogos.forEach(jogo => { %>
+            <li>
+                <a href="/pagina_jogo/<%= jogo._id %>">
+                    <img src="<%= jogo.db_imagem %>">
+                    <h3><%= jogo.db_nome_jogo %></h3>
+                </a>
+                <a href="/ireditar/<%= jogo._id %>">EDITAR</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

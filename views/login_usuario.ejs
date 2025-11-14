@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+<div class="header-container">
+    <img src="/logo_NightSky.png" class="logo"/>
+    <h1>NightSKY</h1>
+</div>
+<br>
+<div id="logar_usuario">
+    <form method="post" action="/logar_usuario">
+        <p>Email da conta: <br><input type="text" name="email"></p>
+        <p>Senha:<br> <input type="password" name="senha"></p>
+        <% if (resposta) { %>
+            <p><%= resposta %></p>
+        <% } %>
+        <div id="botao_login">
+            <input type="submit" value="Entrar">
+        </div>
+        <br>
+        <br>
+        <div class="link_cadastro"> Não possui uma conta?<a href="/voltarcadastro_jogador">Cadastre-se!</a></div>
+    </form>
+</div>
+</body>
+</html>

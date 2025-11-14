@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Jogador</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+<div id="container">
+    <img src="/logo_NightSky.png" class="logo"/>
+    <div class="link_tipo"><a href="/voltarcadastro_dev">Desenvolvedor</a></div>
+    <div class="link_tipo"><a href="/voltarcadastro_publisher">Publisher</a></div>
+</div>
+<h1>Cadastrar jogador</h1>
+<div id="formulario_jogador">
+    <form method="post" action="/cadastrar_jogador">
+        <br>
+        <p>Nome: <br><input type="text" name="nome"></p>
+        <p>Email: <br><input type="text" name="email"></p>
+        <p>Senha: <br><input type="password" name="senha"></p>
+        <% if (resposta) { %>
+            <p><%= resposta %></p>
+        <% } %>
+        <div id="botao_cadastro">
+            <input type="submit" value="Cadastrar-se">
+        </div>
+    </form>
+    <br>
+    <div class="link_cadastro"> Já possui uma conta?<a href="/voltarlogin">Faça login!</a></div>
+</div>
+</body>
+</html>

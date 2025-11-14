@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Jogo</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+    <h1>Cadastrar jogo</h1>
+    <div id = "formulario_jogo">
+        <form method="post" action="/cadastrar_jogo">
+            <br>
+            <p>Nome do jogo: <br><input type="text" name="nome_jogo"></p>
+            <p>Descrição do jogo: <br><input type="text" name="descricao"></p>
+            <p>Categoria: <br>
+                RPG: <input type="checkbox" value="RPG" name="categoria"> <br/>
+                Ação: <input type="checkbox" value="Ação" name="categoria"> <br/>
+                Terror: <input type="checkbox" value="Terror" name="categoria"> <br/>
+                Esporte: <input type="checkbox" value="Esporte" name="categoria"> <br/>
+                Corrida: <input type="checkbox" value="Corrida" name="categoria"> <br/>
+                Soulslike: <input type="checkbox" value="Soulslike" name="categoria"> <br/>
+            </p>
+            <p>Desenvolvedor: <br>
+                <select name="dev">
+                    <% devs.forEach(dev => { %>
+                        <option value="<%= dev.db_email %>"><%= dev.db_nome %></option>
+                    <% }) %>
+                </select>
+            <p>Preço: <br><input type="number" name="preco"></p>
+            <p>Imagem (URL): <br><input type="text" name="imagem_jogo"></p>
+            <% if (resposta) { %>
+                <p><%= resposta %></p>
+            <% } %>
+            <div id="botao_cadastro">
+                <input type="submit" value="Cadastrar jogo">
+            </div>
+        </form>
+        <br>
+        <div class="link_paginas">
+            <a href="/voltarcatalogo" class="foto-link">
+                <img src="/seta.png" class="imagem"/>
+            </a>
+            <a href="/navegar">Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

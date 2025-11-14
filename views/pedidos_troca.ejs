@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitações de Troca</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+<div id="container">
+    <div class="link_paginas">
+        <a href="/irlista_amigos">
+            <img src="/seta.png" class="imagem"/>
+        </a>
+    </div>
+</div>
+<div class="solicitacoes-container">
+    <div class="solicitacoes-enviadas">
+        <p>Solicitações enviadas:</p>
+        <ul>
+            <% pendentes.forEach(pedir_troca => { %>
+                <li>
+                    <p><%= pedir_troca.nome %> </p>
+                    <p>Jogo oferecido: <%= pedir_troca.jogo_enviar %> </p>
+                    <p>Jogo a ser recebido: <%= pedir_troca.jogo_receber %> <span class="pendente">(pendente)</span></p>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+    <div class="solicitacoes-recebidas">
+        <p>Solicitações recebidas:</p>
+        <% if (resposta) { %>
+            <p><%= resposta %></p>
+        <% } %>
+        <ul>
+            <% solicitacoes.forEach(solicitacao => { %>
+                <li>
+                    <h3><%= solicitacao.nome %></h3>
+                    <p>Jogo oferecido: <%= solicitacao.jogo_enviar %> </p>
+                    <p>Jogo a ser recebido: <%= solicitacao.jogo_receber %></p>
+                    <form action="/aceitar_troca" method="post">
+                        <input type="hidden" name="id" value="<%= solicitacao._id %>">
+                        <input type="hidden" name="jogador_recebendo" value="<%= solicitacao.emailamigo %>">
+                        <input type="hidden" name="id_jogo_enviar" value="<%= solicitacao.id_enviar %>">
+                        <input type="hidden" name="id_jogo_receber" value="<%= solicitacao.id_receber %>">
+                        <button type="submit">Aceitar</button>
+                    </form>
+                    <form action="/recusar_troca" method="post">
+                        <input type="hidden" name="id" value="<%= solicitacao._id %>">
+                        <button type="submit">Recusar</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

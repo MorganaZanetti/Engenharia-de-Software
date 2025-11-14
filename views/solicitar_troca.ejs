@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitação de Troca</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+    <div id="container">
+        <div class="link_paginas">
+            <a href="/irlista_amigos">
+                <img src="/seta.png" class="imagem"/>
+            </a>
+        </div>
+    </div>
+    <br>
+    <form method="post" action="/pedir_troca">
+    <p>Jogo que deseja enviar:</p>
+    <select name="jogoenviar">
+        <% meusjogos.forEach(jogo => { %>
+            <option value="<%= jogo.db_jogo_id %>"><%= jogo.db_nome_jogo %></option>
+        <% }) %>
+    </select>
+    <br>
+    <br>
+    <p>Jogo que deseja receber:</p>
+    <select name="jogoreceber">
+        <% seusjogos.forEach(jogo => { %>
+            <option value="<%= jogo.db_jogo_id %>"><%= jogo.db_nome_jogo %></option>
+        <% }) %>
+    </select>
+    <% if (resposta) { %>
+        <p><%= resposta %></p>
+    <% } %>
+    <br>
+    <br>
+        <button type="submit">Solicitar troca</button>
+    </form>
+</body>
+</html>

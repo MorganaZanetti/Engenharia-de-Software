@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitações</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+    <div id="container">
+        <div class="link_paginas">
+            <a href="/irlista_amigos" class="foto-link">
+                <img src="/seta.png" class="imagem"/>
+            </a>
+        </div>
+    </div>
+    <div class="solicitacoes-container">
+        <div class="solicitacoes-enviadas">
+            <p>Solicitações enviadas:</p>
+            <ul>
+                <% if (pendentes && pendentes.length > 0) { %>
+                    <% pendentes.forEach(quase_amigo => { %>
+                        <li>
+                            <h3><%= quase_amigo.nome %> <span style="color: #ffd43b;">(pendente)</span></h3>
+                        </li>
+                    <% }) %>
+                <% } else { %>
+                        <li class="lista-vazia">Nenhuma solicitação enviada</li>
+                    <% } %>
+            </ul>
+        </div>
+
+        <div class="solicitacoes-recebidas">
+            <p>Solicitações recebidas:</p>
+            <% if (resposta) { %>
+                <p class="mensagem-resposta"><%= resposta %></p>
+            <% } %>
+            <ul>
+                <% if (solicitacoes && solicitacoes.length > 0) { %>
+                    <% solicitacoes.forEach(solicitacao => { %>
+                        <li>
+                            <h3><%= solicitacao.nome %></h3>
+                            <div class="botoes-container">
+                                <form action="/aceitar_amigo" method="post">
+                                    <input type="hidden" name="id" value="<%= solicitacao._id %>">
+                                    <button type="submit">Aceitar</button>
+                                </form>
+                                    <form action="/recusar_amigo" method="post">
+                                        <input type="hidden" name="id" value="<%= solicitacao._id %>">
+                                        <button type="submit">Recusar</button>
+                                    </form>
+                            </div>
+                        </li>
+                        <% }) %>
+                        <% } else { %>
+                        <li class="lista-vazia">Nenhuma solicitação recebida</li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+</body>
+</html>

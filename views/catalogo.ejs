@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+<div id="container">
+    <div class="link_paginas">
+        <img src="/logo_NightSky.png" class="logo1"/>
+        <a href="/navegar">
+            <%= resposta %>
+        </a>
+        <a href="/irlista_amigos">
+            <%= listaamigos %>
+        </a>
+        <a href="/irperfil" class="foto-link">
+            Perfil
+        </a>
+    </div>
+</div>
+    <h1>Catalogo de jogos</h1>
+    <br>
+    <ul>
+        <% catalogo.forEach(jogo => { %>
+        <li>
+            <div class="pagina_jogo">
+            <a href="/pagina_jogo/<%= jogo._id %>">
+                <img src="<%= jogo.db_imagem %>">
+                <h3><%= jogo.db_nome_jogo %></h3>
+                <p>R$ <%= jogo.db_preço %></p>
+            </a>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

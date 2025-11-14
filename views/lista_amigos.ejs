@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Amigos</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+    <div id="container">
+        <div class="link_paginas">
+            <a href="/voltarcatalogo">
+                <img src="/seta.png" class="imagem"/>
+            </a>
+            <a href="/irsolicitacoes">Solicitações de amizade</a>
+            <a href="/irpedidos_troca">Solicitações de troca</a>
+        </div>
+    </div>
+    <br>
+    <div id="container_amigos">
+        <form method="post" action="/adicionar_amigo">
+            <p>Procurar jogador:</p>
+            <p><input type="text" name="amigo_nome"></p>
+            <% if (resposta) { %>
+                <p><%= resposta %></p>
+            <% } %>
+            <input type="submit" value="Adicionar amigo">
+        </form></div>
+    <br>
+    <div id="container_amigos2">
+        <p>Lista de amigos:</p>
+        <ul>
+        <% lista.forEach(amigo => { %>
+            <li>
+                <div id="nome_amigo">
+                    <h3><%= amigo.nome %></h3>
+                </div>
+                <a href="/irtroca/<%= amigo.emailamigo %>">TROCA</a>
+            </li>
+        <% }) %>
+         </ul>
+    </div>
+</body>
+</html>
