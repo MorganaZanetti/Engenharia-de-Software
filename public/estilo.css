@@ -1,0 +1,850 @@
+/* PRINCIPAL */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 150px;
+    height: 180px;
+}
+.logo1{
+    width: 70px;
+    height: 100px;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+/* FORMULÁRIOS PARA LOGIN */
+#logar_usuario {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+#logar_usuario p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+#botao_login {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#logar_usuario input[type="text"],
+#logar_usuario input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+#logar_usuario input[type="text"],
+#logar_usuario input[type="password"],
+#logar_usuario input[type="submit"] {
+    height: 40px;
+    font-size: 15px;
+    justify-content: center;
+}
+.link_cadastro {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: black;
+}
+.link_cadastro a {
+    color: mediumblue;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.link_cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* FORMULÁRIOS PARA CADASTRO */
+/* cadastro de jogador */
+#formulario_jogador {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+#formulario_jogador p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+#botao_cadastro {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#formulario_jogador input[type="text"],
+#formulario_jogador input[type="password"] {
+    width: 100%;
+    height: 50px; /* ALTURA AUMENTADA */
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+#formulario_jogador input[type="text"]:focus,
+#formulario_jogador input[type="password"]:focus {
+    height: 40px;
+    font-size: 15px;
+    justify-content: center;
+}
+.link_tipo{
+    font-size: 18px;
+}
+.link_tipo a{
+    color: #e1e5e9;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    background: darkslateblue;
+    border-bottom: 5.8px solid ghostwhite;
+    padding: 12px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    gap: 10px;
+}
+
+#nome_amigo h3{
+    color: slateblue;
+}
+
+#formulario_dev {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+ #cadastrar_dev p {
+     font-size: 18px;
+     color: black;
+     margin-bottom: 20px;
+     font-weight: 500;
+ }
+#formulario_dev input[type="text"],
+#formulario_dev input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+#formulario_dev input[type="text"]:focus,
+#formulario_dev input[type="password"]:focus {
+    height: 40px;
+    font-size: 15px;
+    justify-content: center;
+}
+
+
+/* CADASTRO DE PUBLISHER */
+#formulario_publisher {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+#cadastrar_publisher p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+#formulario_publisher input[type="text"],
+#formulario_publisher input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+#formulario_publisher input[type="text"]:focus,
+#formulario_publisher input[type="password"]:focus {
+    height: 40px;
+    font-size: 15px;
+    justify-content: center;
+}
+
+
+/* MENSAGEM DE ERRO */
+#logar_usuario p:contains("Email não encontrado!"),
+#logar_usuario p:contains("Senha errada!"){
+    color: darkred;
+    justify-content: center;
+}
+
+
+/* CATÁLOGO DE JOGOS */
+.link_paginas{
+    font-size: 18px;
+}
+.link_paginas a{
+    color: #e1e5e9;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+li {
+    list-style: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0;
+}
+li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+.pagina_jogo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.pagina_jogo a:link,
+.pagina_jogo a:hover,
+.pagina_jogo a:focus {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.pagina_jogo h3 {
+    font-size: 1.3em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagina_jogo p {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #51cf66;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+/* EDITAR JOGO */
+#formulario_jogo {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+#formulario_jogo p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+#formulario_jogo input[type="text"],
+#formulario_jogo input[type="number"],
+#formulario_jogo input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+#formulario_jogo input[type="text"]:focus,
+#formulario_jogo input[type="password"]:focus {
+    height: 40px;
+    font-size: 15px;
+    justify-content: center;
+}
+
+
+/* PERFIL */
+.foto_user {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+.container_perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: 40px;
+}
+.perfil-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    text-align: center;
+}
+.perfil-info {
+    margin-bottom: 30px;
+}
+.perfil-info p {
+    font-size: 1.3em;
+    color: white;
+    margin: 15px 0;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    text-align: left;
+}
+.perfil-info strong {
+    color: #51cf66;
+    font-weight: 600;
+}
+.perfil-logout {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    cursor: pointer;
+}
+.perfil-logout:hover {
+    background: linear-gradient(135deg, #ff5252, #e53935);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    text-decoration: none;
+}
+.perfil-logout:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+
+/* PÁGINA DE JOGO */
+.jogo-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+.jogo-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.jogo-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.jogo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.jogo-info h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: white;
+    line-height: 1.2;
+}
+.jogo-detalhes {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.jogo-detalhes p {
+    font-size: 1.1em;
+    margin: 12px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+.jogo-detalhes p:last-child {
+    border-bottom: none;
+}
+.jogo-detalhes strong {
+    color: #51cf66;
+    font-weight: 600;
+    min-width: 120px;
+    display: inline-block;
+}
+.jogo-detalhes span {
+    text-align: right;
+    flex: 1;
+    margin-left: 15px;
+}
+.preco-destaque {
+    font-size: 1.8em !important;
+    font-weight: 700 !important;
+    color: #51cf66 !important;
+    background: rgba(81, 207, 102, 0.1) !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    border: 2px solid rgba(81, 207, 102, 0.3) !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+}
+.jogo-compra {
+    margin-top: 30px;
+    text-align: center;
+}
+.jogo-compra button {
+    background: linear-gradient(135deg, #51cf66, #40c057);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.3);
+    width: 100%;
+    max-width: 300px;
+}
+.jogo-compra button:hover {
+    background: linear-gradient(135deg, #40c057, #2f9e44);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(81, 207, 102, 0.4);
+}
+.jogo-compra button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(81, 207, 102, 0.3);
+}
+.descricao-jogo {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.descricao-jogo strong {
+    color: #51cf66;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+.categoria-tag {
+    background: rgba(102, 126, 234, 0.3);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 1px solid rgba(102, 126, 234, 0.5);
+}
+
+
+/* LISTA DE AMIGOS */
+#container_amigos {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+#container_amigos2 {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+#container_amigos form p {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+#container_amigos input[type="text"] {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+#container_amigos input[type="text"]:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+#container_amigos input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, #51cf66, #40c057);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+#container_amigos input[type="submit"]:hover {
+    background: linear-gradient(135deg, #40c057, #2f9e44);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(81, 207, 102, 0.4);
+}
+
+
+/* SOLICITAÇÕES DE AMIZADE */
+.imagem {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+.solicitacoes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.solicitacoes-enviadas,
+.solicitacoes-recebidas {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-height: 300px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+li {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+li h3 {
+    font-size: 1.3em;
+    margin: 0 0 15px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    color: white;
+    text-align: center;
+}
+li h3:contains("(pendente)") {
+    color: #ffd43b;
+}
+li form {
+    display: inline-block;
+    margin: 5px;
+}
+button {
+    background: linear-gradient(135deg, #51cf66, #40c057);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+button:hover {
+    background: linear-gradient(135deg, #40c057, #2f9e44);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(81, 207, 102, 0.4);
+}
+form:last-child button {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+form:last-child button:hover {
+    background: linear-gradient(135deg, #ff5252, #e53935);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.pendente {
+    color: #ffd43b !important;
+    font-weight: 600;
+}
+
+
+/* BIBLIOTECA */
+#container .link_paginas {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+}
+li {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0;
+}
+li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+li a:link,
+li a:visited,
+li a:hover,
+li a:active,
+li a:focus {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+li:hover img {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
+}
+li h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    color: white;
+}
+.badge-biblioteca {
+    display: inline-block;
+    background: linear-gradient(135deg, #51cf66, #40c057);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+
+/* JOGOS DO DESENVOLVEDOR */
+h3{
+    color: white;
+}
+body > a {
+    display: inline-block;
+    background: linear-gradient(135deg, #51cf66, #40c057);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(81, 207, 102, 0.3);
+}
+li > a:last-child {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: greenyellow;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+}
